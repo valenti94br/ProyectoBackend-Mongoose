@@ -7,7 +7,7 @@ app.use(express.json())
 
 
 app.use('/post', require('./routes/posts'));
-
+app.use('user',require('./routes/users'));
 
 
 dbConnection()
