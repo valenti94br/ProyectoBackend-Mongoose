@@ -12,4 +12,4 @@ const PostController = {
   },
 };
 
-module.exports = PostController; // Agregamos esta línea para exportar el controlador
+module.exports = PostController;
