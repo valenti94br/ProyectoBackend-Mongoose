@@ -14,7 +14,7 @@ const UserController = {
         }
     },
 
-    async login(req, res) {
+   /* async login(req, res) {
         try {
             const user = await User.findOne({
                 email: req.body.email,
@@ -46,7 +46,7 @@ const UserController = {
                 message: "Hubo un problema al intentar desconectar al usuario",
             });
         }
-    },
+    }
 };
-
+*/ }
 module.exports = UserController;
