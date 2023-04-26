@@ -1,10 +1,11 @@
+
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 require("dotenv").config()
 
 const UserController = {
 
-    async register(req, res, next) {
+    async register(req, res, next) { //next para hacer uso del middleware errors
         try {
             const user = await User.create(req.body);
             res.status(201).send({ message: "Usuario registrado con exito", user });
@@ -30,12 +31,20 @@ const UserController = {
         }
     },
 
-  async logout(req, res) {
+    async getInfo(req, res) {
         try {
-            //borrar todas las sesiones
-            // await User.findByIdAndUpdate(req.user._id, {
-            //     tokens: [] ,
-            //   });
+            const user = req.user;
+            res.send(user);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({
+                message: "Ha habido un problema al obtener la información del usuario",
+            });
+        }
+    },
+
+    async logout(req, res) {
+        try {
             await User.findByIdAndUpdate(req.user._id, {
                 $pull: { tokens: req.headers.authorization },
             });
@@ -48,6 +57,8 @@ const UserController = {
         }
     }
 
-}; 
+};
 
 module.exports = UserController;
+
+
