@@ -40,13 +40,10 @@ const UserController = {
                 message: "Ha habido un problema al obtener la información del usuario",
             });
         }
-    }
-   /* async logout(req, res) {
+    },
+    
+    async logout(req, res) {
         try {
-            //borrar todas las sesiones
-            // await User.findByIdAndUpdate(req.user._id, {
-            //     tokens: [] ,
-            //   });
             await User.findByIdAndUpdate(req.user._id, {
                 $pull: { tokens: req.headers.authorization },
             });
@@ -57,7 +54,7 @@ const UserController = {
                 message: "Hubo un problema al intentar desconectar al usuario",
             });
         }
-    } */
+    } 
 
 }; 
 
