@@ -16,3 +16,4 @@ app.use('/users', require('./routes/users'))
 app.use(handleTypeError);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));//Comprobando
+

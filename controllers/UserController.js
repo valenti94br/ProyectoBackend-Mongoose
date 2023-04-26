@@ -29,7 +29,18 @@ const UserController = {
             res.status(500).send(error);
         }
     },
-
+    
+    async getInfo(req, res) {
+        try {
+            const user = req.user;
+            res.send(user);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({
+                message: "Ha habido un problema al obtener la información del usuario",
+            });
+        }
+    }
    /* async logout(req, res) {
         try {
             //borrar todas las sesiones
