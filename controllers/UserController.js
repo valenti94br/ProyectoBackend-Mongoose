@@ -30,7 +30,7 @@ const UserController = {
         }
     },
 
-   /* async logout(req, res) {
+  async logout(req, res) {
         try {
             //borrar todas las sesiones
             // await User.findByIdAndUpdate(req.user._id, {
@@ -46,7 +46,7 @@ const UserController = {
                 message: "Hubo un problema al intentar desconectar al usuario",
             });
         }
-    } */
+    }
 
 }; 
 

@@ -11,6 +11,7 @@ app.use(express.json())
 dbConnection()
 
 app.use('/posts', require('./routes/posts'));
+app.use('/users', require('./routes/users'));
 app.use('/users', require('./routes/users'))
 
 app.use(handleTypeError);
