@@ -14,7 +14,7 @@ const UserController = {
         }
     },
 
-    /*async login(req, res) {
+    async login(req, res) {
         try {
             const user = await User.findOne({
                 email: req.body.email,
@@ -30,7 +30,7 @@ const UserController = {
         }
     },
 
-    async logout(req, res) {
+   /* async logout(req, res) {
         try {
             //borrar todas las sesiones
             // await User.findByIdAndUpdate(req.user._id, {
@@ -46,8 +46,8 @@ const UserController = {
                 message: "Hubo un problema al intentar desconectar al usuario",
             });
         }
-    }*/
+    } */
 
-};
+}; 
 
 module.exports = UserController;
