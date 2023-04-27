@@ -27,7 +27,18 @@ const PostController = {
       console.error(error);
       res.status(500).send({ message: 'Ha habido un problema al actualizar el post' })
     }
-  }
+  },
+  async deletePost(req, res) {
+    try {
+      const post = await Post.findByIdAndDelete(req.params._id);
+      res.send({ message: "Post eliminado correctamente", post });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({
+        message: "Ha habido un problema al eliminar el post",
+      });
+    }
+  },
 
 
 }
