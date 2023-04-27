@@ -4,7 +4,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const { dbConnection } = require("./config/config")
 const { handleTypeError } = require("./middleware/errors");
-
+const { authentication } = require("./middleware/authentication")
 
 app.use(express.json())
 
