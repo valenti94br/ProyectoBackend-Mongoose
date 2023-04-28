@@ -89,9 +89,36 @@ const PostController = {
       })
     }
   },
-
+  async like(req, res) {
+    try {
+      const post = await Post.findByIdAndUpdate(req.params._id);
+      if (post.likes.includes(req.user._id)) {
+        return res.status(400).send('Hay un problema con tu like');
+      }
+      post.likes.push(req.user._id)
+      await post.save();
+      res.status(201).send({ msg: 'Te gusta este post!', post })
+    } catch (error) {
+      console.error(error);
+      res.status(500).send(error)
+    }
+  },
+  async unlike(req, res) {
+    try {
+      const post = await Post.findByIdAndUpdate(req.params._id);
+      if (post.likes.includes(req.user._id)) {
+        post.likes.pull(req.user._id);
+        await post.save();
+        return res.status(200).send({ msg: 'Has quitado tu like!', post })
+      } else {
+        return res.status(400).send('Hay un problema')
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).send(error)
+    }
+  }
 }
-
 
 
 module.exports = PostController;

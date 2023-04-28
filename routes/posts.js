@@ -11,6 +11,9 @@ router.delete('/deletePost/:_id', authentication, isAuthor, PostController.delet
 router.get('/getAll',PostController.getAllInf)
 router.get('/getByTitle/:title', PostController.getByTitle)
 router.get('/getById/:_id', PostController.getById)
+router.put('/like/:_id', authentication, PostController.like)
+router.put('/unlike/:_id', authentication, PostController.unlike)
+
 
 
 module.exports = router;
