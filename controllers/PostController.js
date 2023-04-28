@@ -6,7 +6,7 @@ const PostController = {
 
   async createPost(req, res) {
     try {
-      const post = await Post.create({...req.body,userId:req.user._id})
+      const post = await Post.create({...req.body,userId:req.user._id})//el userId se poneautomaticamente el del usuarioque esta conectado
       res.status(201).send({message:'Post creado correctamente',post})
     } catch (error) {
       console.error(error)
@@ -57,7 +57,7 @@ const PostController = {
   },
   async getById(req, res) {
     try {
-      const post = await Post.findById(req.params._id)
+      const post = await Post.findById(req.params._id).populate("comments")
       res.send({ message: 'Post por id encontrado con exito', post })
     } catch (error) {
       console.error(error);
