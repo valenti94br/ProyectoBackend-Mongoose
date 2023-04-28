@@ -6,8 +6,8 @@ const PostController = {
 
   async createPost(req, res) {
     try {
-      const post = await Post.create({...req.body,userId:req.user._id})//el userId se poneautomaticamente el del usuarioque esta conectado
-      res.status(201).send({message:'Post creado correctamente',post})
+      const post = await Post.create({ ...req.body, userId: req.user._id })//el userId se poneautomaticamente el del usuarioque esta conectado
+      res.status(201).send({ message: 'Post creado correctamente', post })
     } catch (error) {
       console.error(error)
       res.status(500).send({ message: 'Ha habido un problema al crear el post' })
@@ -37,6 +37,29 @@ const PostController = {
       res.status(500).send({
         message: "Ha habido un problema al eliminar el post",
       });
+    }
+  },
+  async getAllInf(req, res) {
+    try {
+      const { page = 1, limit = 10 } = req.query;
+
+      const posts = await Post.find()
+        .populate('userId')
+        .populate({
+          path: 'comments',
+          populate: {
+            path: 'userId'
+          }
+        })
+        .limit(limit)
+        .skip((page - 1) * limit);
+      res.status(201).send({ message: 'Mostrando informacion correctamente', posts });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({
+        message: "Ha habido un problema al intentar coger la informacion",
+      });
+
     }
   },
   async getByTitle(req, res) {
