@@ -39,7 +39,22 @@ const PostController = {
       });
     }
   },
+  async getByTitle(req, res) {
+    try {
+      if (req.params.title.length > 20) {
+        return res.status(400).send("Búsqueda demasiado larga");
+      }
+      const title = new RegExp(req.params.title, "i");//la i significa que va a ser insensible de may y min
+      const post = await Post.find({ title });
+      res.send({ message: "Post encontrado con exito", post })
 
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({
+        message: "Ha habido un problema al buscar la informacion",
+      })
+    }
+  },
 
 }
 
