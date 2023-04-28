@@ -20,6 +20,11 @@ una API REST que sea capaz de lo siguiente:
 * Dar/quitar Like a post.
 * Backend disponible en producción.
 
+Distribucion de carpetas en VSC 🖥️ 
+---
+
+![](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/distribucionCarpetas.png)
+
 
 		
 		
