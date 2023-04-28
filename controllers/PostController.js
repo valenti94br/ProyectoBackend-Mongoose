@@ -55,6 +55,17 @@ const PostController = {
       })
     }
   },
+  async getById(req, res) {
+    try {
+      const post = await Post.findById(req.params._id)
+      res.send({ message: 'Post por id encontrado con exito', post })
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({
+        message: "Ha habido un problema al intentar coger la informacion",
+      })
+    }
+  },
 
 }
 
