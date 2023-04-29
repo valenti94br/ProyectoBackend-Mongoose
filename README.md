@@ -25,6 +25,21 @@ Distribucion de carpetas en VSC 🖥️
 
 ![](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/distribucionCarpetas.png)
 
+Tecnologias 🛠
+---
+* MySQL and MySQL Workbench
+* Postman -for endpoint testing
+* Node.JS
+ #Packages:#
+* express
+* mysql2
+* sequelize
+* jsonwebtoken
+* bcryptjs
+* nodemailer
+* multer
+* nodemon
+
 
 		
 		
