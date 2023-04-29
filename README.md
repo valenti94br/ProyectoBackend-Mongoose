@@ -27,19 +27,19 @@ Distribucion de carpetas en VSC 🖥️
 
 Tecnologias 🛠
 ---
-* MySQL and MySQL Workbench
+* MongoDB and Atlas mongoDB
 * Postman -for endpoint testing
 * Node.JS
- #Packages:#
+
+* <h3>Packages:</h3>
 * express
-* mysql2
-* sequelize
+* mongoose
 * jsonwebtoken
 * bcryptjs
-* nodemailer
-* multer
 * nodemon
+* dotenv
 
 
+![dependencias](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/dependencias.png)
 		
 		
