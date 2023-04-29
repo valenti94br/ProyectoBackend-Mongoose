@@ -14,11 +14,14 @@ Objetivos 🎯
 
 		
 una API REST que sea capaz de lo siguiente:
+
+
 * Registro de usuarios usando Bcrypt.
 * Login de usuarios + token + middleware.
 * Que sea capaz de crear un CRUD.
 * Dar/quitar Like a post.
 * Backend disponible en producción.
+
 
 Distribucion de carpetas en VSC 🖥️ 
 ---
@@ -41,5 +44,30 @@ Tecnologias 🛠
 
 
 ![dependencias](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/dependencias.png)
-		
+
+
+Instalación ⚙️
+---
+
+1. **Clona el repositorio**
+
+```
+https://github.com/valenti94br/ProyectoBackend-Mongoose.git
+ ```
+ 
+2. **Instala las dependencias**
+ 
+ ```
+ npm install
+ ```
+ 
+3. **Configurar variables de entorno**
+
+
+
+4. **Levanta el servidor**
+
+```
+npm run dev
+```
 		
