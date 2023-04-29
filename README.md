@@ -26,7 +26,9 @@ una API REST que sea capaz de lo siguiente:
 Distribucion de carpetas en VSC 🖥️ 
 ---
 
-![](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/distribucionCarpetas.png)
+![carpetas en VSC](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/distribucionCarpetas.png)
+
+
 
 Tecnologias 🛠
 ---
@@ -43,7 +45,8 @@ Tecnologias 🛠
 * dotenv
 
 
-![dependencias](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/dependencias.png)
+<img src="https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/dependencias.png" width="600">
+
 
 
 Instalación ⚙️
@@ -70,4 +73,12 @@ https://github.com/valenti94br/ProyectoBackend-Mongoose.git
 ```
 npm run dev
 ```
+
+Autores 🧑‍✒️
+---
+
+* Gonzalo Martí - [goner10](https://github.com/Goner10)
+
+* Valentí Barat- [valenti94br](https://github.com/valenti94br)
+
 		
