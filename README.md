@@ -26,7 +26,7 @@ una API REST que sea capaz de lo siguiente:
 Distribucion de carpetas en VSC 🖥️ 
 ---
 
-![carpetas en VSC](https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/distribucionCarpetas.png)
+![carpetas en VSC](assets/distribucionCarpetas.png)
 
 
 
@@ -45,7 +45,7 @@ Tecnologias 🛠
 * dotenv
 
 
-<img src="https://github.com/valenti94br/ProyectoBackend-Mongoose/blob/gonzalo/assets/dependencias.png" width="600">
+![](assets/dependencias.png)
 
 
 
